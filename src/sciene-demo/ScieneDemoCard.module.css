@@ -1,0 +1,129 @@
+.wrapper {
+  position: relative;
+
+  /* Scoped blue tokens */
+  --sciene-blue-50: #eff6ff;
+  --sciene-blue-100: #dbeafe;
+  --sciene-blue-200: #bfdbfe;
+  --sciene-blue-300: #93c5fd;
+  --sciene-blue-400: #60a5fa;
+  --sciene-blue-500: #3b82f6;
+  --sciene-blue-600: #2563eb;
+  --sciene-blue-700: #1d4ed8;
+}
+
+/* Off-white card background */
+.background {
+  position: absolute;
+  inset: 0 -32px 0 -32px;
+  border-radius: 20px;
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Inner content layer */
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: 24px 24px 20px;
+}
+
+/* Reset button */
+.resetButton {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px 4px 8px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-gray-500);
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.resetButton:hover {
+  color: var(--color-gray-700);
+  background: var(--color-gray-200);
+}
+
+/* App window */
+.appWindow {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--color-gray-300);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Title bar */
+.titleBar {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--color-gray-200);
+  background: var(--color-gray-50);
+}
+
+.titleBarDots {
+  display: flex;
+  gap: 6px;
+}
+
+.titleBarDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.titleBarTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-gray-500);
+  letter-spacing: -0.01em;
+}
+
+.titleBarSpacer {
+  width: 38px;
+}
+
+/* Two-panel layout */
+.content {
+  display: flex;
+  height: 420px;
+}
+
+/* Title & description */
+.cardInfo {
+  margin-top: 16px;
+  padding: 0 2px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-800);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.cardDescription {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--color-gray-500);
+}

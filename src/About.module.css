@@ -1,0 +1,313 @@
+.page {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+/* ── Header ── */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.avatarWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-gray-300);
+}
+
+.badge {
+  position: absolute;
+  bottom: 0;
+  right: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-pumpkin-500);
+  border: 2px solid var(--color-gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge svg {
+  width: 10px;
+  height: 10px;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 6px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--color-gray-500);
+  margin-top: 2px;
+}
+
+.timezone {
+  font-size: 11px;
+  color: var(--color-gray-400);
+  margin-top: 4px;
+}
+
+/* ── Contact ── */
+
+.section {
+  margin-bottom: 40px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 13px;
+  color: var(--color-gray-600);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.contactRow:hover {
+  color: var(--color-gray-800);
+}
+
+.contactIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-gray-400);
+  flex-shrink: 0;
+}
+
+/* ── Links grid ── */
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.linkItem:hover {
+  background: var(--color-gray-100);
+  color: var(--color-gray-800);
+}
+
+.linkIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-gray-400);
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.linkItem:hover .linkIcon {
+  color: var(--color-gray-600);
+}
+
+.linkArrow {
+  margin-left: auto;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  color: var(--color-gray-400);
+}
+
+.linkItem:hover .linkArrow {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+/* ── About text ── */
+
+.aboutText {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--color-gray-600);
+}
+
+.aboutText p {
+  margin: 0 0 20px;
+}
+
+.aboutText p:last-child {
+  margin-bottom: 0;
+}
+
+.greeting {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-700);
+  margin-bottom: 4px !important;
+}
+
+/* ── Career timeline ── */
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-400);
+  margin-bottom: 20px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timelineEntry {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timelineHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timelineSymbol {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(0.6);
+}
+
+[data-theme="dark"] .timelineSymbol {
+  filter: grayscale(1) brightness(0) invert(0.7);
+}
+
+.timelineCompany {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  letter-spacing: -0.01em;
+}
+
+.timelineRole {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.timelineRole::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-gray-300);
+}
+
+.timelineEntry:last-child .timelineRole::before {
+  display: none;
+}
+
+.timelineYear {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-gray-400);
+  font-variant-numeric: tabular-nums;
+  min-width: 32px;
+}
+
+.timelineTitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-gray-600);
+}
+
+.timelineBadge {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-pumpkin-500);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-pumpkin-200);
+  background: var(--color-pumpkin-50);
+}
+
+/* ── Divider ── */
+
+.divider {
+  height: 1px;
+  background: var(--color-gray-200);
+  margin: 40px 0;
+  border: none;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .page {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .header {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .aboutText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+}

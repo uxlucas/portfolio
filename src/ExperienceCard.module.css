@@ -1,0 +1,145 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  background: var(--color-gray-800);
+  border: 1px solid var(--color-gray-700);
+  transition: border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-gray-600);
+}
+
+/* Ambient gradient background */
+.ambient {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradientLayer {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(196, 148, 210, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(255, 179, 186, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(162, 196, 232, 0.3) 0%, transparent 60%);
+}
+
+.floatingOrb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.orb1 {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 200, 180, 0.25) 0%, transparent 70%);
+  top: 20%;
+  left: 25%;
+}
+
+.orb2 {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(180, 160, 220, 0.3) 0%, transparent 70%);
+  top: 50%;
+  right: 30%;
+}
+
+.orb3 {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(255, 146, 55, 0.15) 0%, transparent 70%);
+  bottom: 25%;
+  left: 45%;
+}
+
+/* Center icon */
+.iconWrap {
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Content area */
+.content {
+  padding: 16px 18px 18px;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-500);
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-gray-100);
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: 14px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-pumpkin-400);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.15s ease;
+}
+
+.card:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+.tag {
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-gray-700);
+  color: var(--color-gray-500);
+}

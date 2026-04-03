@@ -1,0 +1,140 @@
+.footer {
+  border-top: 1px solid var(--color-gray-200);
+  padding: 80px 48px 48px;
+  margin-top: 40px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Email ── */
+.emailBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.email {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-gray-900);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: color 0.15s ease;
+}
+
+.email:hover {
+  color: var(--color-pumpkin-500);
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-300);
+  background: var(--color-gray-100);
+  color: var(--color-gray-500);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.copyBtn:hover {
+  color: var(--color-gray-700);
+  background: var(--color-gray-200);
+  border-color: var(--color-gray-400);
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: var(--color-gray-200);
+  margin-bottom: 32px;
+}
+
+/* ── Bottom row ── */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 4px;
+}
+
+.link {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-500);
+  background: none;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.link:hover {
+  color: var(--color-gray-700);
+}
+
+.socials {
+  display: flex;
+  gap: 4px;
+}
+
+.socialLink {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-400);
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+
+.socialLink:hover {
+  color: var(--color-gray-700);
+}
+
+.copy {
+  font-size: 11px;
+  color: var(--color-gray-400);
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .footer {
+    padding: 48px 16px 32px;
+  }
+
+  .email {
+    font-size: 22px;
+  }
+
+  .emailBlock {
+    margin-bottom: 32px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+}

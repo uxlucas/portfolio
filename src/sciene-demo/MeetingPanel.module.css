@@ -1,0 +1,263 @@
+.panel {
+  width: 55%;
+  padding: 18px 16px;
+  border-right: 1px solid var(--color-gray-200);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ─── Header ─── */
+.header {
+  margin-bottom: 14px;
+}
+
+.meetingTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  letter-spacing: -0.01em;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.metaItem {
+  font-size: 11px;
+  color: var(--color-gray-500);
+}
+
+.metaDot {
+  font-size: 11px;
+  color: var(--color-gray-400);
+}
+
+/* ─── Client badge ─── */
+.clientBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--sciene-blue-50);
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.15s ease;
+}
+
+.clientBadge:hover {
+  background: var(--sciene-blue-100);
+}
+
+.clientName {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sciene-blue-600);
+}
+
+/* ─── Client popover ─── */
+.clientPopover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 10;
+  width: 200px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  padding: 12px 14px;
+}
+
+.popoverCompany {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 2px;
+}
+
+.popoverRole {
+  font-size: 11px;
+  color: var(--color-gray-600);
+  margin-bottom: 6px;
+}
+
+.popoverContext {
+  font-size: 10px;
+  color: var(--color-gray-500);
+  padding-top: 6px;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+/* ─── Avatars ─── */
+.avatarRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.avatar {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 600;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.avatarTooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gray-800);
+  border-radius: 6px;
+  padding: 6px 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  z-index: 10;
+}
+
+.tooltipName {
+  font-size: 10px;
+  font-weight: 500;
+  color: white;
+}
+
+.tooltipRole {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ─── Sections ─── */
+.section {
+  margin-bottom: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-400);
+  font-weight: 500;
+}
+
+.progressCount {
+  font-size: 10px;
+  color: var(--color-gray-400);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Checklist ─── */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.checklistItem:hover {
+  background: var(--color-gray-100);
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 4px;
+  border: 1.5px solid var(--color-gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.checkboxChecked {
+  border-color: var(--sciene-blue-500);
+  background: var(--sciene-blue-500);
+}
+
+.itemText {
+  font-size: 12px;
+  color: var(--color-gray-700);
+  transition: color 0.22s ease, text-decoration-color 0.22s ease;
+  text-decoration: line-through;
+  text-decoration-color: transparent;
+}
+
+.itemTextChecked {
+  color: var(--color-gray-400);
+  text-decoration-color: var(--color-gray-400);
+}
+
+/* ─── Notes ─── */
+.notesToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-gray-400);
+  font-family: inherit;
+}
+
+.notesContent {
+  padding-top: 6px;
+}
+
+.notesList {
+  margin: 0;
+  padding-left: 14px;
+  list-style: none;
+}
+
+.noteItem {
+  position: relative;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-gray-600);
+  margin-bottom: 4px;
+  padding-left: 8px;
+}
+
+.noteItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-gray-400);
+}
