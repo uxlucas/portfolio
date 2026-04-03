@@ -13,6 +13,7 @@ import { ExperienceCard } from './ExperienceCard'
 import { SocialLinks } from './SocialLinks'
 import { Footer } from './Footer'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const pageTransition = {
   duration: 0.28,
@@ -152,6 +153,7 @@ export default function App() {
       <Footer onNavigate={setPage} />
       <SocialLinks />
       <Analytics />
+      <SpeedInsights />
     </div>
   )
 }
