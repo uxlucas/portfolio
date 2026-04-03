@@ -182,14 +182,14 @@ const flipVariants = {
   }),
   center: {
     y: 0, opacity: 1, rotateX: 0, scale: 1,
-    transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] as const },
   },
   exit: (dir: number) => ({
     y: dir > 0 ? -40 : 40,
     opacity: 0,
     rotateX: dir > 0 ? 45 : -45,
     scale: 0.9,
-    transition: { duration: 0.25, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.25, ease: [0.25, 0.1, 0.25, 1] as const },
   }),
 }
 
@@ -199,11 +199,11 @@ const monthVariants = {
   }),
   center: {
     x: 0, opacity: 1,
-    transition: { duration: 0.25, ease: 'easeOut' },
+    transition: { duration: 0.25, ease: 'easeOut' as const },
   },
   exit: (dir: number) => ({
     x: dir > 0 ? -30 : 30, opacity: 0,
-    transition: { duration: 0.2, ease: 'easeIn' },
+    transition: { duration: 0.2, ease: 'easeIn' as const },
   }),
 }
 

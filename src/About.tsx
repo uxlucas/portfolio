@@ -8,7 +8,7 @@ const stagger = {
 
 const fadeUp = {
   hidden: { opacity: 0, y: 8 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: 'easeOut' as const } },
 }
 
 function CheckIcon() {
@@ -30,15 +30,6 @@ function MailIcon() {
     <svg className={styles.contactIcon} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="3.5" width="12" height="9" rx="1.5" />
       <path d="m2 5 6 4 6-4" />
-    </svg>
-  )
-}
-
-function GlobeIcon() {
-  return (
-    <svg className={styles.contactIcon} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="8" cy="8" r="6" />
-      <path d="M2 8h12M8 2c1.7 2 2.5 4 2.5 6s-.8 4-2.5 6c-1.7-2-2.5-4-2.5-6s.8-4 2.5-6z" />
     </svg>
   )
 }
@@ -232,9 +223,9 @@ export function About() {
           {[
             { symbol: '/sciene-symbol.svg', company: 'Sciene', roles: [{ year: '2025', title: 'Senior Product Designer', current: true }] },
             { symbol: '/miinto-symbol.svg', company: 'Miinto', roles: [{ year: '2024', title: 'Senior Product Designer', current: true }] },
-            { symbol: '/quartile-symbol.svg', company: 'Quartile', roles: [{ year: '2024', title: 'Product Designer' }] },
-            { symbol: '/foundey-symbol.svg', company: 'Foundey', roles: [{ year: '2023', title: 'Product Designer' }] },
-            { symbol: '/wicomm-symbol.svg', company: 'Wicomm Agency', roles: [{ year: '2021', title: 'Jr. UX/UI Designer' }] },
+            { symbol: '/quartile-symbol.svg', company: 'Quartile', roles: [{ year: '2024', title: 'Product Designer', current: false }] },
+            { symbol: '/foundey-symbol.svg', company: 'Foundey', roles: [{ year: '2023', title: 'Product Designer', current: false }] },
+            { symbol: '/wicomm-symbol.svg', company: 'Wicomm Agency', roles: [{ year: '2021', title: 'Jr. UX/UI Designer', current: false }] },
           ].map((entry) => (
             <div key={entry.company} className={styles.timelineEntry}>
               <div className={styles.timelineHeader}>

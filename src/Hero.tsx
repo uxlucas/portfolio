@@ -9,7 +9,7 @@ const float = (delay: number, duration: number, y: number) => ({
     duration,
     delay,
     repeat: Infinity,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
   },
 })
 

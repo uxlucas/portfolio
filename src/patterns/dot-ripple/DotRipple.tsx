@@ -25,16 +25,6 @@ export default function DotRipple() {
   const animRef = useRef(0)
   const [, setTick] = useState(0) // force initial render
 
-  const getGridOrigin = useCallback(() => {
-    const el = containerRef.current
-    if (!el) return { ox: 0, oy: 0 }
-    const w = el.clientWidth
-    const h = el.clientHeight
-    const gridW = (COLS - 1) * GAP
-    const gridH = (ROWS - 1) * GAP
-    return { ox: (w - gridW) / 2, oy: (h - gridH) / 2 }
-  }, [])
-
   const addRipple = useCallback((clientX: number, clientY: number) => {
     const el = containerRef.current
     if (!el) return

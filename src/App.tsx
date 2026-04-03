@@ -15,7 +15,7 @@ import { Footer } from './Footer'
 
 const pageTransition = {
   duration: 0.28,
-  ease: 'easeOut',
+  ease: 'easeOut' as const,
 }
 
 const pageVariants = {

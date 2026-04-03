@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/lucas/claude-code/ui-playground/.claude/worktrees/pedantic-goodall -type f -name package.json -o -name vite.config.* -o -name tsconfig.json -o -name tailwind.config.*)",
+      "Bash(git ls-tree:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:lucaslima.design)",
+      "Bash(find /c/Users/lucas/claude-code/ui-playground/.claude/worktrees/pedantic-goodall -type f -name *Proximity* -o -name *Focus* -o -name *Adaptive*)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebSearch",
+      "WebFetch(domain:lucaslima.framer.website)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

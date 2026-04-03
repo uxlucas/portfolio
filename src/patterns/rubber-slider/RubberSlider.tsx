@@ -22,8 +22,6 @@ export default function RubberSlider() {
   // Track container shifts when rubber stretching
   const trackShiftX = useTransform(smoothRubber, [-1, 0, 1], [RUBBER_MAX, 0, -RUBBER_MAX])
 
-  // Pumpkin glow intensity at edges
-  const glowOpacity = useTransform(smoothRubber, (v) => Math.abs(v) * 0.5)
 
   const getValueFromPosition = useCallback((clientX: number) => {
     const track = trackRef.current
