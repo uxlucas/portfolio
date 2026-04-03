@@ -54,6 +54,13 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
 }
 
+/* Prevent saving/dragging images and text selection on images */
+img, video {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 body {
   margin: 0;
   background: var(--color-gray-50);
